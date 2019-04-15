@@ -11,6 +11,7 @@ export class FooComponent {
    data: Object;
    loading: boolean;
    o :Observable<Object>;
+   oFoo : Observable<Foo[]>;
    constructor(public http: HttpClient) {}
    makeRequest(): void {
      console.log("here");
@@ -50,5 +51,11 @@ export class FooComponent {
        this.loading = false;
      });
  }
+ makeTypedRequest() : void
+ {
+   this.oFoo = this.http.get<Foo[]>('https://jsonplaceholder.typicode.com/posts');
+   this.oFoo.subscribe(data => {this.fooData = data;});
+ }
+
 
 }
