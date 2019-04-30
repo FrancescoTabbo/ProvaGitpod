@@ -1,3 +1,38 @@
-<form>
+<div class="container">
+  <form class="jumbotron">
+      <div class="form-group">
+        <label for="title">Nome:</label>
+        <input name="title" #name class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="link">Cognome:</label>
+        <input name="link" #surname class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="link">Indirizzo:</label>
+        <input name="link" #address class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="link">Telefono:</label>
+        <input name="link" #phone class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="link">Email:</label>
+        <input name="link" #email class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="link">Data Prenotazione:</label>
+        <input name="link" #date class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="link">Ora Prenotazione:</label>
+        <input name="link" #hour class="form-control">
+      </div>
+    <button (click)="addArticle(name, surname, address, phone, email, date, hour)" class="btn btn-primary">
+    <!--<button (click)="addArticle(newtitle, newlink)" class="btn btn-primary">-->
+      Prenota
+    </button>
+  </form>
+</div>
 
-  
+<h3>Lista Prenotazioni:</h3>
