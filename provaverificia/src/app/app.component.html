@@ -28,11 +28,20 @@
         <label for="link">Ora Prenotazione:</label>
         <input name="link" #Ora class="form-control">
       </div>
-    <button (click)="addArticle(Nome, Cognome, Indirizzo, Telefono, Email, Data, Ora)" class="btn btn-primary">
-    <!--<button (click)="addArticle(newtitle, newlink)" class="btn btn-primary">-->
+    <button (click)="makeCompactRequest(Nome, Cognome, Indirizzo, Telefono, Email, Data, Ora)" class="btn btn-primary">
       Prenota
     </button>
   </form>
 </div>
 
 <h3>Lista Prenotazioni:</h3>
+
+<div class="container" *ngFor="let art of prenotazione">
+  <app-prenotazione  [prenotazione]="art"> </app-prenotazione>
+  <button class="btn btn-primary" (click)="onClick(art)" > dettagli </button>
+  <hr>
+</div>
+
+<div class="container">
+    <app-dettagli [selectedPren] = "selectedPren" ></app-dettagli>
+</div>

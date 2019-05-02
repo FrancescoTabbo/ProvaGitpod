@@ -4,11 +4,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PrenotazioneComponent } from './prenotazione/prenotazione.component';
+import { DettagliComponent } from './dettagli/dettagli.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PrenotazioneComponent
+    PrenotazioneComponent,
+    DettagliComponent
   ],
   imports: [
     BrowserModule, NgbModule, HttpClientModule

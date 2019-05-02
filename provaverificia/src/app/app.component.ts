@@ -17,6 +17,7 @@ export class AppComponent {
   postArt: Observable<Object>;
   tempArt: Prenotazione;
   num: number = 0;
+  selectedPren : Prenotazione;
 
   constructor(public http: HttpClient){
     this.prenotazione = new Array<Prenotazione>();
@@ -36,6 +37,8 @@ export class AppComponent {
     this.loading = true;
     this.postArt = this.http.post('https://my-json-server.typicode.com/Lucas2000s/InformaticaMilazzo/prenotazioni', JSON.stringify(this.tempArt));
 
+  this.prenotazione.push(this.tempArt);
+
 
     this.postArt.subscribe(data => {
       this.data = data;
@@ -43,10 +46,18 @@ export class AppComponent {
       //console.log(data);
       this.loading = false;
 
-      this.prenotazione.push(this.tempArt);
+
 
     });
 
     return false;
   }
+
+
+onClick(art)
+{
+    this.selectedPren = art;
+    console.log(this.selectedPren);
+}
+
 }
