@@ -1,0 +1,71 @@
+<div class='span6'>
+    <h1>
+		Welcome to {{ title }}!
+	</h1>
+
+    <form>
+        <select (change)=onChange($event.target.value)>
+            <option [value]='album.id' *ngFor='let album of albums'> {{album.title}}</option>
+        </select>
+        <br> titolo:
+        <input #t>
+        <br> durata :
+        <input #l>
+        <br> data pubblicazione:
+        <input type='date' #d>
+        <br>
+
+        <button (click)='onClick(t,d,l)'> Prenota </button>
+
+    </form>
+
+    <br>    <br>
+
+    <hr>
+
+    <div *ngIf='isViewable'>
+        <app-song-list *ngFor='let sng of songList' [song]='sng'>
+        </app-song-list>
+    </div>
+
+</div>
+
+<br>
+<br>
+
+<button (click)='toggle()'>Hide</button>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<app-dettagli-album [value]='selectedAlbum'> </app-dettagli-album>
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr><br><br>
+{{selectedRoom | json}}
+
+<ul>
+    <li *ngFor='let song of songList'>
+        {{song.album.title}} : {{song | json}}
+    </li>
+</ul>
+
+{{songList | json}}
+
+<br>
+<br>
+<br>
