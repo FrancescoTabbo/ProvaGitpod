@@ -8,7 +8,20 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  data: Object;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+data: Object;
    o :Observable<Object>;
    constructor(public http: HttpClient) {}
    Login(): void {
@@ -39,5 +52,3 @@ export class AppComponent {
 
      });
       }
-
-}
