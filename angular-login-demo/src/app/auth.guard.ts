@@ -3,6 +3,9 @@ import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angul
 import { Observable } from 'rxjs';
 import { AuthService } from './auth.service';
 
+//canActivate() method returns true if the isLoggedIn() methods returns true i.e if the user is logged in
+//CanActivate returns true the route which has this guard applied can be accessed by the user
+
 @Injectable({
   providedIn: 'root'
 })
