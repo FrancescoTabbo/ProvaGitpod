@@ -1,0 +1,16 @@
+<div class="cont_login">
+  <form class="jumbotron">
+      <div class="form-group">
+        <label for="title">Nickname:</label>
+        <input name="title" #Nickname class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="link">Password:</label>
+        <input name="link" #Password class="form-control">
+      </div>
+    <button (click)="Login(Nickname, Password)" class="btn btn-primary">
+      Login
+    </button>
+  </form>
+</div>
+

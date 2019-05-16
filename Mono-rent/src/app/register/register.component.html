@@ -1,0 +1,35 @@
+<div class="cont_login">
+  <form class="jumbotron">
+      <div class="form-group">
+        <label for="title">Nome:</label>
+        <input name="title" #Nome class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="link">Cognome:</label>
+        <input name="link" #Cognome class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="link">Indirizzo:</label>
+        <input name="link" #Indirizzo class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="link">Telefono:</label>
+        <input name="link" #Telefono class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="link">Email:</label>
+        <input name="link" #Email class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="link">Nickname:</label>
+        <input name="link" #Nickname class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="link">Password:</label>
+        <input name="link" #Password class="form-control">
+      </div>
+    <button (click)="Registrati(Nome, Cognome, Indirizzo, Telefono, Email, Nickname, Password)" class="btn btn-primary">
+      Registrati
+    </button>
+  </form>
+</div>

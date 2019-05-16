@@ -27,4 +27,4 @@ const routes: Routes = [
   bootstrap: [AppComponent],
   exports: [RouterModule]
 })
-export class AppModule { }
+export class AppRoutingModule { }
