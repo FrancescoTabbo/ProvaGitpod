@@ -1,6 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -8,47 +9,14 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+   verifica:boolean=false;
 
+  constructor( public cookieService: CookieService ) {
+      if(cookieService.get('ID') != undefined){
+          this.verifica=true;
+      }
+   }
+
+  ngOnInit(): void {}
 
 }
-
-
-
-
-
-
-
-
-
-
-data: Object;
-   o :Observable<Object>;
-   constructor(public http: HttpClient) {}
-   Login(): void {
-   this.http
-     .post('',
-       JSON.stringify({
-         body: 'bar',
-         title: 'foo',
-         userId: 1
-       })
-     )
-     .subscribe(data => {
-       this.data = data;
-
-     });
-      }
-    Registrati(): void {
-   this.http
-     .post('',
-       JSON.stringify({
-         body: 'bar',
-         title: 'foo',
-         userId: 1
-       })
-     )
-     .subscribe(data => {
-       this.data = data;
-
-     });
-      }
