@@ -7,7 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { CookieService } from 'ngx-cookie-service';
-
+import { AppRoutingModule } from './app-routing.module';
+import { LoginModule } from './login/login.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,7 @@ import { CookieService } from 'ngx-cookie-service';
     LoginComponent
   ],
   imports: [
-    BrowserModule, NgbModule, HttpClientModule
+    BrowserModule, NgbModule, HttpClientModule, AppRoutingModule, LoginModule
   ],
   providers: [ CookieService ],
   bootstrap: [AppComponent]

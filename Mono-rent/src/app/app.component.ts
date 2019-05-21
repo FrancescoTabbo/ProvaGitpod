@@ -2,6 +2,7 @@ import { Component, OnInit  } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
+import { RouterModule, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-root',

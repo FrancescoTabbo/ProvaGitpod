@@ -2,7 +2,7 @@ import { Component, OnInit, Input  } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -39,8 +39,8 @@ export class LoginComponent {
         }
     });
       }
-      Regi(){
+      /*Regi(){
           this.router.location('/admin');
-      }
+      }*/
 
 }
