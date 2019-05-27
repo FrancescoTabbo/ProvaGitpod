@@ -1,0 +1,4 @@
+<ul>
+  <li *ngFor="let verdura of verdure" [class.selected]="verdura === verduraSelezionata" (click)="onSelect(verdura)">{{verdura.nome}}<button (click)="dettaglioVerdura(verdura)">Compra</button></li>
+</ul>
+<app-vegetable-detail *ngIf="verduraSelezionata" [verdura]="verduraSelezionata"></app-vegetable-detail>
