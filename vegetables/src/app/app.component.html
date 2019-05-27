@@ -1,0 +1,17 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+    <input type="text" class="form-control" [formControl]="myForm.controls['nome']">nome
+    <div *ngIf="!myForm.controls['nome'].valid" class="alert alert-danger">nome è invalido</div>
+    <div *ngIf="myForm.controls['nome'].hasError('required')" class="alert alert-danger">nome è richiesto</div>
+
+    <input type="text" class="form-control" [formControl]="myForm.controls['descrizione']">Descrizione
+    <div *ngIf="!myForm.controls['descrizione'].valid" class="alert alert-danger">descrizione è invalido</div>
+    <div *ngIf="myForm.controls['descrizione'].hasError('required')" class="alert alert-danger">descrizione è richiesto</div>
+
+    <input type="text" class="form-control" [formControl]="myForm.controls['prezzo']">prezzo
+    <div *ngIf="!myForm.controls['prezzo'].valid" class="alert alert-danger">prezzo è invalido</div>
+    <div *ngIf="myForm.controls['prezzo'].hasError('required')" class="alert alert-danger">prezzo è richiesta</div>
+
+    <div *ngIf="!myForm.valid" class="alert alert-danger">Il form non è valido</div>
+    <button class="btn btn-success btn-block" type="submit">Aggiungi</button>
+  </form>
+  <app-vegetables-list [verdure]="verdure"></app-vegetables-list>
